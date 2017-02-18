@@ -1,0 +1,339 @@
+@import "_colors.scss";
+@import "_typography.scss";
+@import "_buttons.scss";
+@import "_navbar.scss";
+@import "_helpers.scss";
+@import "_accordions.scss";
+@import "_modals.scss";
+@import "_tooltips.scss";
+@import "_utility-belt.scss";
+@import "_animations.scss";
+@import "_banner.scss";
+
+body {
+  background: $white url('http://adamruf.com/images/barely-there-grid-by-adam-ruf.png') left top;
+  color: $font-default;
+  @include base-font;
+  font-size: 18px;
+  line-height: 1.55em;
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - *\
+HOMEPAGE
+\* - - - - - - - - - - - - - - - - - - - - */
+
+.hero-unit {
+  h1 {
+    color: darken($green, 10%);
+    @include slab-font;
+    font-size: 4.5rem;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: 1.1;
+    text-transform: none;
+    word-spacing: 0;
+    @media screen and (max-width: 523px) {
+      font-size: 4rem;
+    }
+  }
+  h2 {
+    color: #777;
+    @include base-font;
+    font-size: 2em;
+    font-weight: 300;
+    letter-spacing: -1px;
+    margin-bottom: 1.15em;
+    text-transform: none;
+  }
+}
+
+.hero-img {
+  width: 95%;
+}
+
+#hierarchy-of-user-needs {
+  position: relative;
+  top: -5vw;
+  z-index: -1;
+}
+
+[title="SumoMe"] {
+  cursor: default;
+  opacity: 0 !important;
+}
+
+.selected-writing {
+  li h4 {
+    letter-spacing: -0.0075em;
+    margin-top: 0;
+    a {font-weight: 600;}
+  }
+}
+
+/* - - - - - - - - - - - - - - - - - - - - *\
+PORTFOLIO
+\* - - - - - - - - - - - - - - - - - - - - */
+
+.recent-work {
+  padding-top: 1em;
+  transition: background 0.5s, border-color 0.5s;
+  h2 {
+    line-height: 1em;
+    margin-top: 0.35em;
+    margin-bottom: 0.3em;
+    @media screen and (max-width: 991px) {
+      text-align: center;
+    }
+    i.tipped {
+      font-size: 0.5em;
+    }
+  }
+  i.tipped {
+    border: none;
+    opacity: 0.5;
+    font-size: 0.75em;
+    padding-right: 0.25em;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    transition: 0.5s;
+  }
+  h3 {
+    margin-bottom: 0.3em;
+    @media screen and (max-width: 991px) {
+      text-align: center;
+    }
+  }
+}
+
+.portfolio-icons {
+  display: block;
+  margin-bottom: 0.25em;
+}
+
+a.img-link,
+a.img-link:hover,
+a.img-link:active,
+a.img-link:focus,
+a.whats-new-img-link,
+a.whats-new-img-link:hover,
+a.whats-new-img-link:active,
+a.whats-new-img-link:focus {
+  border: none;
+  display: block;
+  position: relative;
+  text-decoration: none;
+}
+
+a.img-link:before {
+  background: $green;
+  border-radius: 0 0 0 10px;
+  box-shadow: 0 2px 1px rgba(0,0,0,0.2);
+  color: $white;
+  content: 'View Site';
+  display: block;
+  @include icon-font;
+  font-size: 1.25em;
+  opacity: 0;
+  padding: 0.5em 0.65em 0.5em 0.75em;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  -webkit-transition: all 0.25s ease-out;
+  -moz-transition: all 0.25s ease-out;
+  -ms-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
+}
+
+a.img-link:hover:before {opacity: 1;}
+
+.img-thumbnail {
+  padding: 0;
+  position: relative;
+}
+
+.whats-new-img {
+  margin: 0 auto;
+  max-width: 150px;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - *\
+RECOMMENDED RESOURCES
+\* - - - - - - - - - - - - - - - - - - - - */
+
+.book-cover {margin-bottom: 1em;}
+
+.resources {
+  font-size: 1em;
+  margin: 1em auto;
+  border-top: 7px solid rgba(238, 238, 238, 0.33);
+  padding: 9px;
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  -ms-transition: all 0.35s;
+  transition: all 0.35s;
+  &:hover {
+    background: rgba(95, 207, 128, 0.1);
+    border-color: #5fcf80;
+  }
+}
+
+.full-title {font-size: 18px;}
+
+li.resource {
+  border-radius: 0.25em;
+  h4 {
+    font-weight: 600;
+    letter-spacing: -0.0075em;
+    margin-bottom: 0;
+  }
+  p {margin-bottom: 0;}
+  a, a:hover, a:active, a:focus {
+    display: block;
+    padding: 0.05em 1em 0.5em;
+  }
+  a:hover, a:active, a:focus {
+    background-color: rgba(95, 207, 128, 0.1);
+    border: none;
+  }
+  a p, a:hover p {
+    color: rgba(0,0,0,0.75);
+  }
+  .tag {
+    border: 1px solid #bbb;
+    border-radius: 0.25em;
+    color: #999;
+    font-size: 1.3rem;
+    padding: 0.15em 0.35em;
+  }
+}
+
+/* - - - - - - - - - - - - - - - - - - - - *\
+ABOUT
+\* - - - - - - - - - - - - - - - - - - - - */
+
+.adam-photo-large img {
+  border-radius: 2rem;
+  max-width: 75%;
+}
+
+.adam-photo-small img {
+  width: 100%;
+}
+
+ul.progress-bar ul {
+  margin-left: 0;
+  li {
+    list-style: none;
+  }
+}
+
+.progress {
+  background-color: transparent;
+  box-shadow: none;
+  height: 35px;
+}
+
+.progress-bar {
+  border-radius: 4px;
+  box-shadow: none;
+  p {
+    color: $white;
+    font-size: 2.1rem;
+    line-height: 1.6;
+    margin-left: 1rem;
+    padding: 0;
+    text-align: left;
+    text-shadow: none;
+  }
+}
+
+.progress-bar-success {
+  background-color: $green;
+}
+
+.label-info {
+  background: $green;
+  font-size: 1em;
+  margin-left: 0.25em;
+  padding: 0.3em;
+  text-shadow: none;
+}
+
+.list-flush-left {
+  list-style-position: outside;
+  padding-left: 2rem;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - *\
+404
+\* - - - - - - - - - - - - - - - - - - - - */
+
+.js--404 {
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - *\
+FOOTER
+\* - - - - - - - - - - - - - - - - - - - - */
+
+footer {
+  background: $black;
+  padding: 2em 0 1em;
+  p {
+    color: $font-light-subtle;
+    font-size: 0.8em;
+  }
+  #footer-connect {
+    font-size: 2rem;
+    margin-left: 0.5em;
+    position:relative;
+
+    a {
+      background-color: transparent;
+      border: none;
+      border-radius: 0.3rem;
+      color: $font-light-subtle;
+      display: inline-block;
+      transition: all 0.3s ease-out;
+      width: 3rem;
+      &:hover, &:active, &:focus {
+        background-color: $green;
+        color: $font-light-default;
+        outline: 0;
+        box-shadow: none;
+        -webkit-transform: translateY(-2px);
+        transform: translateY(-2px);
+      }
+    }
+  }
+
+  &.footer-fixed {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+}
+
+/* - - - - - - - - - - - - - - - - - - - - *\
+FOCUS & SELECTION
+\* - - - - - - - - - - - - - - - - - - - - */
+
+input:active, input:focus, textarea:active, textarea:focus, span.radio-labels:focus {
+  outline: 4px solid $green;
+  background: $white !important;
+  color: darken($green, 15%) !important;
+}
+::selection {
+  background: rgba(124, 189, 135, 0.25); /* Safari */
+  }
+::-moz-selection {
+  background: rgba(124, 189, 135, 0.25); /* Firefox */
+}
