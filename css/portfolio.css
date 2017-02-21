@@ -24,6 +24,12 @@ h5{
   color: #999;
 }
 
+@media screen and (max-width: 500px)	{
+	.caption {
+	  margin-top: -10px;
+	}
+}
+
 @media screen and (min-width: 699px)	{
 	.portfolio{
 		width:900px;
