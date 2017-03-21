@@ -22,11 +22,15 @@ h5{
   margin-bottom: 16px;
   font-style: italic;
   color: #999;
+	text-align: center;
 }
 
 @media screen and (max-width: 500px)	{
 	.caption {
 	  margin-top: -10px;
+	}
+	.spacer-block {
+    padding-top: 30%;
 	}
 }
 
@@ -34,5 +38,5 @@ h5{
 	.portfolio{
 		width:900px;
 	}
-
+	
 }

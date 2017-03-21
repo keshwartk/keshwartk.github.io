@@ -95,19 +95,47 @@ color: rgb(60,89,104);
   border-radius: 10px;
 }
 
-#comcast{
-    width: 280px;
-    margin-top: 33%;
+#comcast_persona{
+  width: 250px;
+  margin-top: 30%;
 }
 
 #plainlanguage{
     width: 280px;
-    margin-top: 33%;
+    margin-top: 30%;
+    border-radius: 5%;
+}
+#ge{
+  width: 250px;
+  margin-top: 8%;
 
 }
-#coloradoan{
-    width: 280px;
+#trackme{
+    width: 250px;
+    margin-top: 10%;
+}
+#cb_mobile{
+    width: 250px;
+    margin-top: 10%;
+}
+#cb_web{
+    width: 250px;
     margin-top: 30%;
+}
+#dish{
+  width: 280px;
+  margin-top: 30%;
+  border-radius: 5%;
+}
+#runfor{
+  width: 280px;
+  margin-top: 18%;
+  border-radius: 5%;
+}
+#coloradoan{
+    width: 230px;
+    margin-top: 10%;
+    border-radius: 15%;
 }
 
 #mockup{
